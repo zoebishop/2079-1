@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - 2079-1</title>
+  
+  
+  
+  
+<style>
+.flex-container1 {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgb(216,191,216);
+  align-items: center;
+  justify-content: center;
+  border-style:double;
+  border-color:white;
+  border-width:9px;
+}
+
+.flex-container1 > div {
+  background-color: rgb(255,240,245);
+  width: 250px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.flex-container2 {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgb(216,191,216);
+  align-items: center;
+  justify-content: center;
+  border-style:double;
+  border-color:white;
+  border-width:9px;
+}
+
+.flex-container2 > div {
+  background-color: rgb(255,240,245);
+  width: 250px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <h1> Flexible Boxes</h1>
+
+<div class="flex-container1">
+  <div>Hours</div>
+  <div>Minutes</div>
+  <div>Seconds</div>  
+</div>
+
+<div class="flex-container2">
+  <div
+       id="hours">1</div>
+  <div
+       id="minutes">2</div>
+  <div
+       id="seconds">3</div>  
+</div>
+  
+  
+      <script id="rendered-js" >
+console.clear();
+console.log("helloworld");
+const numNames = ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve', 'veinte', 'veintiuno', 'veintidós', 'veintitrés', 'veinticuatro', 'veinticinco', 'veintiséis', 'veintisiete', 'veintiocho', 'veintinueve', 'treinta', 'treinta y uno', 'treinta y dos', 'treinta y tres', 'treinta y cuatro', 'treinta y cinco', 'treinta y seis', 'treinta y siete', 'treinta y ocho', 'treinta y nueve', 'cuarenta', 'cuarenta y uno', 'cuarenta y dos', 'cuarenta y tres', 'cuarenta y cinco', 'cuarenta y seis', 'cuarenta y siete', 'cuarenta y ocho', 'cuarenta y nueve', 'cincueta', 'cincueta y uno', 'cincueta y dos', 'cincueta y tres', 'cincueta y cuatro', 'cincueta y cinco', 'cincueta y seis', 'cincueta y siete', 'cincueta y ocho', 'cincueta y nueve', 'sesenta'];
+
+//for (let i = 0; i < numNames.length; i++) {
+  //console.log(numNames[i]);
+//}
+
+function updateTime(){
+  const d = new Date();
+  let secs = d.getSeconds();
+  console.log(secs);
+  if(secs < numNames.length){
+    secs = numNames[secs];
+  }
+   document.getElementById("seconds").innerHTML = secs;
+    let min = d.getMinutes();
+  console.log(min);
+  if(min < numNames.length){
+    min = numNames[min];
+  }
+  document.getElementById("minutes").innerHTML = min;
+  let hour = d.getHours();
+  console.log(hour);
+  if(hour < numNames.length){
+    hour = numNames[hour];
+  }
+  document.getElementById("hours").innerHTML = hour;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
